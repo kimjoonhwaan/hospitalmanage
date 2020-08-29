@@ -90,8 +90,8 @@ phases:
                     httpGet:
                       path: '/actuator/health'
                       port: 8080
-                    initialDelaySeconds: 30
-                    timeoutSeconds: 10
+                    initialDelaySeconds: 60
+                    timeoutSeconds: 20
                     periodSeconds: 5
                     failureThreshold: 10
                   livenessProbe:
