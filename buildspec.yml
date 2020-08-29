@@ -67,7 +67,12 @@ phases:
           labels:
             app: $_PROJECT_NAME
         spec:
-          replicas: 2 
+          replicas: 3
+          strategy:
+            type: RollingUpdate
+            rollingUpdate:
+              maxUnvailable: 2
+              maxXurge: 3
           selector:
             matchLabels:
               app: $_PROJECT_NAME
