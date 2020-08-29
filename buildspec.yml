@@ -71,8 +71,8 @@ phases:
           strategy:
             type: RollingUpdate
             rollingUpdate:
-              maxUnvailable: 1
-              maxSurge: 2
+              maxUnavailable: 1
+              maxSurge: 1
           selector:
             matchLabels:
               app: $_PROJECT_NAME
